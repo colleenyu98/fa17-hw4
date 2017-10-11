@@ -1,0 +1,20 @@
+<h1> Cats </h1>
+<% @cats.each do |cat| %>
+    <%= cat.name %><br/>
+<% end %>
+
+<h1> Todos </h1>
+<% @todos.each do |td| %>
+    Task: <%= td.tasks %>
+    Finished: <%= td.finished %>
+      <br/>
+<% end %>
+<%= link_to('Create TODO', todos_new_path)%>
+
+<h1> Users </h1>
+<% @users.each do |user| %>
+    <%= user.username %>
+    <%= user.email %>
+    <%= user.age %>
+      <br/>
+<% end %>
